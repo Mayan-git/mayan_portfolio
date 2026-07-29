@@ -53,6 +53,27 @@ const projects: Project[] = [
     github: 'https://github.com/Mayan-git/HireWise-AI',
     liveUrl: 'https://hire-wise-ai-gamma.vercel.app',
   },
+  {
+    id: 3,
+    slug: 'employeeai',
+    title: 'EmployeeAI',
+    year: '2026',
+    tagline: 'AI-Powered HR Performance Analytics Platform',
+    tech: ['React (Vite)', 'Node.js', 'Express', 'MongoDB', 'OpenRouter API'],
+    description:
+      'A production-grade MERN HR analytics platform that helps organizations track employee performance and surface AI-driven insights. Anonymized performance data is sent to an LLM via OpenRouter to generate promotion, training, and ranking recommendations per employee, backed by JWT-based role access control for admins and managers.',
+    myRole: [
+      'Independently designed and built a production-grade MERN HR analytics platform for tracking employee performance and generating AI-driven insights.',
+      'Implemented JWT-based authentication with role-based access control, where the first registered user becomes an admin and subsequent users default to managers with permissions restricted to viewing and updating performance scores.',
+      'Integrated the OpenRouter API (GPT-4o-mini) to generate promotion, training, and ranking recommendations per employee, anonymizing names and emails before sending data to the LLM.',
+      'Hardened the app against MongoDB regex injection via input escaping, added rate limiting on authentication endpoints, Helmet security headers, and fail-fast environment variable validation.',
+      'Built a fully responsive dark/light-mode employee directory with search, department filtering, and pagination, covered by a Vitest/Supertest and React Testing Library test suite.',
+    ],
+    images: [],
+    hoverImage: '',
+    github: 'https://github.com/Mayan-git/employee-system',
+    liveUrl: 'https://employee-system-wheat-delta.vercel.app',
+  },
 ];
 export function getAllProjects(): Project[] {
   return projects;
