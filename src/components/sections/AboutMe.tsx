@@ -92,12 +92,12 @@ I'm currently seeking a Full Stack Developer Intern or AI/ML Intern role where I
             <div className="col-span-12 md:col-span-5 lg:col-span-5 flex items-center justify-center">
               <div className="about-image-wrapper relative w-full max-w-[350px] md:max-w-[380px] h-[360px] md:h-[450px] bg-elevated-dark rounded-2xl overflow-hidden border border-border-subtler">
                 <Image
-                  src="/profile-avatar.png"
+                  src="/profile-avatar2.jpeg"
                   alt="Mayan Prajapati"
                   fill
                   sizes="(max-width: 768px) 350px, 380px"
                   priority
-                  className="object-cover"
+                  className="object-cover object-top"
                 />
               </div>
             </div>
