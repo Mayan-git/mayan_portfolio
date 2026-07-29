@@ -34,21 +34,25 @@ const certifications = [
     title: 'AWS Certified Machine Learning Engineer - Associate',
     date: 'April 2026',
     icon: SiAmazonwebservices,
+    url: 'https://cp.certmetrics.com/amazon/en/public/verify/credential/e848ebe29c89479eae95f1fe5ae5ad4d',
   },
   {
     title: 'AWS Certified Cloud Practitioner',
     date: 'December 2025',
     icon: SiAmazonwebservices,
+    url: 'https://cp.certmetrics.com/amazon/en/public/verify/credential/62115cf5d9ab4d9c817fb80366737b30',
   },
   {
     title: 'Generative AI (Microsoft & LinkedIn)',
     date: 'March 2025',
     icon: FaCertificate,
+    url: 'https://www.linkedin.com/learning/certificates/e7c850db4feaf43c404d5c282ebcaa10c3bd6c1b993acaa16f42eff00261ace3?trk=share_certificate',
   },
   {
     title: 'AI For Everyone',
     date: 'March 2025',
     icon: FaCertificate,
+    url: 'https://coursera.org/verify/INCIW5CMPZ93',
   },
 ];
 
@@ -150,20 +154,26 @@ const Education = () => {
               {certifications.map((cert, i) => {
                 const Icon = cert.icon;
                 return (
-                  <div
+                  <a
                     key={i}
-                    className="cert-card card-elevated flex items-start gap-4 p-6 rounded-2xl bg-surface-mid border border-border-subtler transition-colors duration-300 hover:border-forest/40"
+                    href={cert.url}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="cert-card card-elevated flex items-start gap-4 p-6 rounded-2xl bg-surface-mid border border-border-subtler transition-all duration-300 hover:border-forest/40 hover:bg-elevated-dark/40 group"
                   >
                     <div className="w-10 h-10 rounded-full bg-elevated-dark flex items-center justify-center shrink-0 text-forest-light">
                       <Icon className="w-5 h-5" />
                     </div>
-                    <div>
+                    <div className="flex-1">
                       <h4 className="font-display font-semibold text-base md:text-lg text-light leading-snug mb-1">
                         {cert.title}
                       </h4>
-                      <p className="font-mono text-xs text-warm">{cert.date}</p>
+                      <p className="font-mono text-xs text-warm">{cert.date} &middot; Verify credential</p>
                     </div>
-                  </div>
+                    <span className="text-forest-light opacity-0 group-hover:opacity-100 group-hover:translate-x-1 transition-all duration-300 pt-1">
+                      →
+                    </span>
+                  </a>
                 );
               })}
 
