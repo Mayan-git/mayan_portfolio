@@ -74,6 +74,27 @@ const projects: Project[] = [
     github: 'https://github.com/Mayan-git/employee-system',
     liveUrl: 'https://employee-system-wheat-delta.vercel.app',
   },
+  {
+    id: 4,
+    slug: 'collabnote',
+    title: 'CollabNote',
+    year: '2026',
+    tagline: 'Real-Time Collaborative Note-Taking Platform',
+    tech: ['React', 'Node.js', 'Socket.IO', 'MongoDB', 'Redis', 'TipTap'],
+    description:
+      'A full-stack SaaS note-taking app with Google Docs-style live collaboration and Notion-style organization. Socket.IO with a Redis adapter powers real-time presence, cursor broadcasting, and typing indicators, while a TipTap-based rich editor supports markdown, tables, code blocks, and checklists, alongside pluggable AI writing tools.',
+    myRole: [
+      'Independently designed and built a full-stack collaborative note-taking SaaS app with live, multi-user editing.',
+      'Implemented real-time collaboration using Socket.IO with a Redis adapter for presence, cursor broadcasting, and typing indicators across concurrent editors.',
+      'Built a rich-text editing experience with TipTap supporting markdown, tables, syntax-highlighted code blocks, and checklists, plus automatic version snapshots with one-click restore.',
+      'Designed an owner/editor/commenter/viewer permissions model with email invitations and expiring public share links, backed by JWT authentication and bcrypt password hashing.',
+      'Integrated pluggable AI tools for summarization, grammar correction, rewriting, translation, and title/tag generation, and structured the backend with a layered clean-architecture (routes to controllers to services to repositories to models).',
+    ],
+    images: ['/Projects/CollabNote/01-notes.jpeg'],
+    hoverImage: '/Projects/CollabNote/01-notes.jpeg',
+    github: 'https://github.com/Mayan-git/CollabNote',
+    liveUrl: 'https://collab-note-client-aern-indol.vercel.app',
+  },
 ];
 export function getAllProjects(): Project[] {
   return projects;
